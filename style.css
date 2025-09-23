@@ -1,0 +1,247 @@
+@property --colortitulo{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #1e81b0;
+}
+
+@font-face {
+  font-family: "OverwatchFont";
+  src: url("font/big_noodle_titling.ttf") format("truetype");
+}
+
+/* Mobile First (≈480px o menos) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #cacaca, #ffffff);
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+     padding: 10px;
+}
+
+/* ---------- BARRA NAV ---------- */
+
+nav {
+    background-color: #fc9c1c;
+    color: aliceblue;
+    padding: 8px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;            
+    justify-content: center;     
+    gap: 6px 12px;              
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    font-family: "OverwatchFont", sans-serif;
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #000000;
+    transform: scale(1.05);
+}
+
+/* ---------- CONTENEDORES ---------- */
+.recuadro,
+.contenedor,
+.contenedorAnimado {
+  margin: 20px auto;   
+  padding: 20px;       
+  width: 95%;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recuadro:hover,
+.contenedor:hover,
+.contenedorAnimado:hover {
+    transform: translateY(-5px);
+}
+
+.recuadro b {
+    color: #fc9c1c;
+}
+
+h1 {
+    color: var(--colortitulo);
+    font-family: "OverwatchFont", sans-serif;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+}
+
+p {
+    font-size: 0.9rem;
+}
+
+.contenedor h4::before {
+    content: "★";
+    color: #1e81b0;
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.contenedor a {
+    color: var(--colorlinks);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.contenedor a:hover {
+    color: var(--colorlinks);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* ---------- MASK ---------- */
+.mascara {
+    mask-image: url(https://upload.wikimedia.org/wikipedia/commons/e/e1/Overwatch.svg);
+    mask-repeat: no-repeat;
+    mask-size: 70%;
+    mask-position: center;
+}
+
+/* ---------- ANIMACIONES ---------- */
+.contenedorAnimado {
+    animation-name: cambioColor;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.contenedorAnimado h1 {
+    font-size: 1.5rem;
+    animation-name: cambioH1;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cambioColor {
+    0%   { background-color: rgb(255, 255, 255); transform: rotate(-5deg); color: #000000;}
+    50%  { background-color: rgb(255, 162, 2); transform: rotate(0deg); color: white;}
+    100% { background-color: rgb(37, 104, 250); transform: rotate(5deg); color: white;}
+}
+
+@keyframes cambioH1 {
+    0%   { color: #1e81b0;}
+    50%  { color: rgb(0, 0, 0);}
+    100% { color: rgb(0, 0, 0);}
+}
+
+/* ---------- EJEMPLOS PADRES/HIJOS ---------- */
+.padre {
+    font-size: 20px;
+    font-family: "OverwatchFont";
+    color: #000;
+}
+.hijo {
+    font-size: 2em;
+    color: #fc9c1c;
+}
+.remex {
+    font-size: 2rem;
+    color: #1e81b0;
+}
+.vh {
+    text-align: center;
+    color: black;
+    height: 50vh;
+    background-color: #fc9c1c;
+}
+.vw {
+    text-align: center;
+    color: white;
+    width: 50vw;
+    background-color: #1e81b0;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .recuadro,
+    .contenedor,
+    .contenedorAnimado {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* PC */
+@media (min-width: 1024px) {
+    nav ul {
+        justify-content: flex-start;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    .recuadro,
+    .contenedor,
+    .contenedorAnimado {
+        width: 70%;
+        max-width: 1000px;
+        font-size: 1.1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+}
