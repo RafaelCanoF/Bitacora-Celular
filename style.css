@@ -27,7 +27,7 @@ nav {
     padding: 8px;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 7;
     margin: 0;
 }
 
@@ -187,6 +187,37 @@ img {
     background-color: #1e81b0;
 }
 
+/* ---------- SPLASH ---------- */
+
+.splash {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+}
+
+
+.contenedor.splash img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;     
+  height: auto;   
+}
+
+
+.capa1 { z-index: 1; }  
+.capa2 { z-index: 2; }  
+.capa3 { z-index: 3; }  
+.capa4 { z-index: 4; }  
+.capa5 { z-index: 5; }  
+.capa6 { z-index: 6; }  
+
+
+
+
 /* Tablet */
 @media (min-width: 768px) {
     nav ul {
@@ -217,6 +248,10 @@ img {
     p {
         font-size: 1rem;
     }
+
+.contenedor.splash img {
+    object-position: center top; 
+  }
 }
 
 /* PC */
@@ -244,4 +279,7 @@ img {
     p {
         font-size: 1.1rem;
     }
+.contenedor.splash img {
+    object-position: center center; 
+  }
 }
