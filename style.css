@@ -215,9 +215,40 @@ img {
 .capa5 { z-index: 5; }  
 .capa6 { z-index: 6; }  
 
+.vistas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100vh; 
+  overflow: hidden; 
+}
 
+.vista {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 
+.vista h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
 
+.vista img {
+  max-width: 90%;      
+  max-height: 80vh;    
+  object-fit: contain; 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: #000;
+}
 /* Tablet */
 @media (min-width: 768px) {
     nav ul {
