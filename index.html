@@ -6,6 +6,7 @@
     <link rel="icon" href="img/Logo.ico" >
     <title>Bitacora</title>
     <!--<link rel="stylesheet" href="reset.css">-->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="style.css">
     
 </head>
@@ -30,6 +31,8 @@
             <li><a href="#12">Tema 12</a></li>
             <li><a href="#13">Tema 13</a></li>
             <li><a href="#14">Tema 14</a></li>
+            <li><a href="#15">Tema 15</a></li>
+            <li><a href="#16">Tema 16</a></li>
         </ul>
     </nav>
     <div id="recuadro" ></div>
@@ -37,7 +40,7 @@
         <h1>Recuadro de Datos</h1>
         <h3><b>Nombre:</b> Jesús Rafael Cano Flores 248041</h3>
         <h3><b>Grupo:</b> A</h3>
-        <h3><b>Fecha:</b> 23/Sep/2025</h3>
+        <h3><b>Fecha:</b> 08/Oct/2025</h3>
         <h3><b>Materia:</b> Diseño Web HTML5 y CSS3</h3>
     </div>
     <div id="1" ></div>
@@ -343,5 +346,85 @@ body { font-size: 0.9rem; }
   <img src="img/Bg4.png" class="capa5" alt="Árboles"> 
   <img src="img/Moira.png" class="capa6" alt="Moira">
 </div>
+
+<div id="15"></div>
+<div class="contenedor">
+  <h1>Tema 15 - Código JavaScript</h1>
+  <script>
+    //Este es un comentario
+    console.log("El Script se está ejecutando");
+    document.write("<h2>Contenido agregado en JS</h2>");
+
+    let nombre;
+    nombre = "Juan Jose David";
+
+    var edad = 32;
+    const CURP = "Ejemplo CURP";
+
+    var entero = 10;
+    var decimal = 3.1416;
+    var suma = entero + decimal;
+
+    //Estructuras de control
+
+    //if
+    var calificaciónDeDamaris = 10;
+    if (calificaciónDeDamaris >= 10){
+        console.log("Aprobada")
+    }
+    else{
+        console.log("Reprobada")
+    }
+
+
+    //Switch
+    var OrbeLanzadoMoira = "Daño";
+    switch(OrbeLanzadoMoira) {
+        case "Curacion":
+            console.log("Se lanzó un orbe de curación");
+        break;
+        case "Daño":
+            console.log("Se lanzó un orbe de daño");
+        break;
+        default:
+            console.log("No se lanzó ningún orbe");
+        break;
+    }
+
+
+    //For
+    for(i=1;i<=5;i++){
+        console.log("Recibiste "+i+" puntos de daño");
+    }
+
+
+    //While
+    var cargaUlti = 95;
+    while(cargaUlti < 100){
+        console.log("Tu Ultimate aún no está lista ("+cargaUlti+"%)");
+        cargaUlti++;
+    }
+
+
+    //Do-While
+    var vidaEscudo = 5;
+    do{
+        console.log("Tu escudo tiene "+vidaEscudo+" de vida");
+        vidaEscudo--;
+    }
+    while (vidaEscudo > 0);
+    
+  </script>
+  <img src="img/Js.png" alt="JS Resultado"> 
+  <p>El código JavaScript mostrado realiza varias operaciones básicas para practicar el uso de variables, estructuras de control y ciclos. Primero, se utiliza console.log() para enviar mensajes a la consola y document.write() para agregar contenido directamente a la página web. Luego se declaran variables con let, var y const para demostrar sus diferentes formas de uso. Posteriormente, se aplican estructuras de control como if y switch para evaluar condiciones, mostrando diferentes resultados según el valor de las variables. Finalmente, se implementan tres tipos de bucles: for, while y do-while, que repiten acciones de manera controlada. En conjunto, este script sirve como una introducción práctica a los fundamentos de la programación en JavaScript dentro de un entorno HTML.</p>
+  <img src="img/JS2.jpg" alt="JS Código"> 
+</div>
+<div id="16"></div>
+<div class="contenedor">
+  <h1>Tema 16 - Normalizer</h1>
+  <p>El archivo normalize.css es una hoja de estilos que se utiliza para hacer que los elementos HTML se vean y se comporten de forma más consistente en todos los navegadores. A diferencia del “reset.css”, que elimina por completo los estilos por defecto del navegador, normalize.css los ajusta y corrige solo cuando es necesario, manteniendo aquellos valores útiles que mejoran la accesibilidad y la legibilidad. De esta manera, proporciona una base más estable y uniforme para comenzar a diseñar un sitio web, evitando diferencias visuales entre navegadores como Chrome, Firefox o Edge y facilitando el trabajo del desarrollador en la etapa inicial del diseño.</p>
+  <img src="img/Normalizer.png" alt="SS Normalizer"> 
+</div>
+
 </body>
 </html>
