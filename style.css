@@ -285,6 +285,21 @@ img {
   }
 }
 
+.parcial a{
+    color: #fc9c1c;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.parcial a:hover{
+    color: #1e81b0;
+    transform: scale(5);
+}
+    .subtitle {
+      font-weight: 700;
+      margin-top: 16px;
+      margin-bottom: 6px;
+      text-transform: none;
+    }
+
 /* PC */
 @media (min-width: 1024px) {
     nav ul {
