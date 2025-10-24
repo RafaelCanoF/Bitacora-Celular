@@ -36,6 +36,8 @@
             <li><a href="#17">Propuesta</a></li>
             <li><a href="#18">Parcial 2</a></li>
             <li><a href="#19">justificación</a></li>
+            <li><a href="#20">Códigos JS</a></li>
+            <li><a href="#21">Tema 17</a></li>
         </ul>
     </nav>
     <div id="recuadro" ></div>
@@ -43,7 +45,7 @@
         <h1>Recuadro de Datos</h1>
         <h3><b>Nombre:</b> Jesús Rafael Cano Flores 248041</h3>
         <h3><b>Grupo:</b> A</h3>
-        <h3><b>Fecha:</b> 13/Oct/2025</h3>
+        <h3><b>Fecha:</b> 24/Oct/2025</h3>
         <h3><b>Materia:</b> Diseño Web HTML5 y CSS3</h3>
     </div>
     <div id="1" ></div>
@@ -484,5 +486,122 @@ body { font-size: 0.9rem; }
       <p>Nuestra plataforma ofrece series exclusivas con tramas de mayor calidad (hasta 10 veces mejores, según la propuesta), y evita las ventanas emergentes y anuncios sugestivos comunes en otras páginas.</p>
     </div>
 </div>
+<div id="20"></div>
+<div class="contenedor">
+  <h1>Códigos JavaScript</h1>
+
+  <h2>1. Funciones</h2>
+  <pre><code>
+function saludar() {
+  console.log("¡Hola, bienvenido a JavaScript!");
+}
+
+saludar(); // Llamada a la función
+  </code></pre>
+<p>Imprime la función saludar</p>
+  <h2>2. Funciones que retornan valores</h2>
+  <pre><code>
+function sumar(a, b) {
+  return a + b; // Retorna el resultado de la suma
+}
+
+let resultado = sumar(5, 3);
+console.log("El resultado es: " + resultado);
+  </code></pre>
+<p>Retorna el valor de la suma de a + b</p>
+  <h2>3. Llamada a una función</h2>
+  <pre><code>
+function mostrarMensaje(nombre) {
+  console.log("Hola " + nombre + ", ¡bienvenido!");
+}
+
+// Llamamos a la función pasando un argumento
+mostrarMensaje("Rafael");
+  </code></pre>
+<p>llama a una función ya compuesta de un mensaje y solo se envía el nombre</p>
+  <h2>4. Imprimir en consola el resultado de una función</h2>
+  <pre><code>
+function multiplicar(x, y) {
+  return x * y;
+}
+
+console.log("El producto es: " + multiplicar(4, 6));
+  </code></pre>
+<p>Imprime en la consola el resultado de la función al momento de llamarla</p>
+  <h2>5. getElementById</h2>
+  <pre><code>
+&lt;p id="mensaje"&gt;Texto original&lt;/p&gt;
+&lt;button onclick="cambiarTexto()"&gt;Cambiar texto&lt;/button&gt;
+
+&lt;script&gt;
+function cambiarTexto() {
+  document.getElementById("mensaje").textContent = "¡El texto ha cambiado!";
+}
+&lt;/script&gt;
+  </code></pre>
+<p>Llama al elemento para editarlo por medio de su id o nombre</p>
+  <h2>6. addEventListener</h2>
+  <pre><code>
+&lt;button id="boton"&gt;Haz clic aquí&lt;/button&gt;
+
+&lt;script&gt;
+document.getElementById("boton").addEventListener("click", function() {
+  alert("¡Has hecho clic en el botón!");
+});
+&lt;/script&gt;
+  </code></pre>
+  <p>Crea una alerta, es un evento de JavaScript</p>
+</div>
+<div id="21"></div>
+<div class="contenedor-parallax">
+<h1>Tema 17 - Parallax</h1>
+<div id="parallax-container">
+   <div id="layer1"> <img src="img/Bg1.jpg" class="capa1" alt="Fondo"> </div>
+  <div id="layer2"><img src="img/Bg.png" class="capa2" alt="Luna"> </div>
+  <div id="layer3"><img src="img/Bg1.png" class="capa3" alt="Nubes"> </div>
+  <div id="layer4"><img src="img/Bg2.png" class="capa4" alt="Edificios"> </div>
+  <div id="layer5"><img src="img/Bg4.png" class="capa5" alt="Árboles"> </div>
+  <div id="layer6"><img src="img/Moira.png" class="capa6" alt="Moira"></div>
+    </div>
+ 
+ <section class="contenido">
+        <h2>Este es un Parallax</h2>
+        <p>Tiene 6 capas y se mueven a distintas velocidades</p>
+    </section>
+</div>
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+            const layer1 = document.getElementById('layer1');
+            const layer2 = document.getElementById('layer2');
+            const layer3 = document.getElementById('layer3');
+            const layer4 = document.getElementById('layer4');
+            const layer5 = document.getElementById('layer5');
+            const layer6 = document.getElementById('layer6');
+            const container = document.getElementById('parallax-container');
+            const speed1 = 0.1; // El fondo se mueve más rápido
+            const speed2 = 0.2; // El frente se mueve más lento
+            const speed3 = 0.25; // El fondo se mueve más rápido
+            const speed4 = 0.4; // El frente se mueve más lento
+            const speed5 = 0.15; // El fondo se mueve más rápido
+            const speed6 = 0.6; // El frente se mueve más lento
+ 
+            function updateParallax() {
+                const scrollOffset = container.getBoundingClientRect().top;
+                layer1.style.transform = `translate3d(0, ${scrollOffset * speed1}px, 0)`;
+ 
+                // La capa media (Layer 2) se desplaza menos
+                layer2.style.transform = `translate3d(0, ${scrollOffset * speed2}px, 0)`;
+                layer3.style.transform = `translate3d(0, ${scrollOffset * speed3}px, 0)`;
+                layer4.style.transform = `translate3d(0, ${scrollOffset * speed4}px, 0)`;
+                layer5.style.transform = `translate3d(0, ${scrollOffset * speed5}px, 0)`;
+                layer6.style.transform = `translate3d(0, ${scrollOffset * speed6}px, 0)`;
+            }
+ 
+            window.addEventListener('scroll', updateParallax);
+ 
+            updateParallax();
+        });
+ 
+</script>
 </html>
