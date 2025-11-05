@@ -21,8 +21,7 @@
             <li><a href="#4">Tema 4</a></li>
             <li><a href="#5">Tema 5</a></li>
             <li><a href="#6">Tema 6</a></li>
-            <li><a href="#7">Tema 7</a></li>
-            <li><a href="#8">Tema 8</a></li>
+            <li><a href="#7">Temas 7 y 8</a></li>
             <li><a href="#9">Tema 9</a></li>
             <li><a href="#10">Tema 10</a></li>
             <li><a href="#ia">Tema IA</a></li>
@@ -38,6 +37,7 @@
             <li><a href="#19">justificación</a></li>
             <li><a href="#20">Códigos JS</a></li>
             <li><a href="#21">Tema 17</a></li>
+            <li><a href="#22">Tema 18</a></li>
         </ul>
     </nav>
     <div id="recuadro" ></div>
@@ -45,7 +45,7 @@
         <h1>Recuadro de Datos</h1>
         <h3><b>Nombre:</b> Jesús Rafael Cano Flores 248041</h3>
         <h3><b>Grupo:</b> A</h3>
-        <h3><b>Fecha:</b> 24/Oct/2025</h3>
+        <h3><b>Fecha:</b> 05/Nov/2025</h3>
         <h3><b>Materia:</b> Diseño Web HTML5 y CSS3</h3>
     </div>
     <div id="1" ></div>
@@ -173,6 +173,8 @@
       </div>
     </div>
 <div id="7" ></div>
+<div class="contenedorflex">
+
     <div class="contenedor">
       <h1>Tema 7 - Media y property</h1>
       <h4>@media</h4>
@@ -193,7 +195,6 @@
       </p>
 
     </div>
-<div id="8" ></div>
     <div class="contenedorAnimado">
       <h1>Tema 8 - Animaciones en CSS</h1>
       <h2>1. Color Animation</h2>
@@ -207,6 +208,10 @@
       <h2>5. Animation-fill-mode</h2>
       <p>Define el estilo del elemento antes y después de la animación.</p>
     </div>
+
+
+</div>
+
 <div id="9" ></div>
     <div class="contenedor">
       <h1>Tema 9 - Padres e hijos</h1>
@@ -222,12 +227,9 @@
     <div class="vh">Hola</div>
     <div class="vw">Adios</div>
     </div>
-    <div id="10" >
-    
-    </div>
-    </div>
-
-    <div class="contenedor">
+    </div> 
+    <div id="10" >    </div>
+<div class="contenedor">
     <h1>Tema 10 - Picture con media</h1>
     <picture>
         <source media="(min-width: 900px)" srcset="https://bnetcmsus-a.akamaihd.net/cms/blog_header/72/72GXOK6QZ44T1655402629948.jpg">
@@ -235,7 +237,10 @@
         <img src="https://bnetcmsus-a.akamaihd.net/cms/blog_header/0z/0Z2JM6X9F7B91666393482670.jpg" alt="banner de sitio con temática de Overwatch" style="width: 100%; height: auto;">
     </picture>
     </div>
-    </div>
+       
+
+
+    
 <div id="ia" ></div>
 <div class="contenedor">
   <h1>Tema IA</h1>
@@ -250,6 +255,7 @@
 </div>
 
 <div id="mapa" ></div>
+<div class="contenedorflex">
 <div class="contenedor">
   <h1>Diagrama de Flujo</h1>
     <img src="img/Diagrama-de-flujo.png" alt="Diagrama de flujo de la página web">
@@ -258,9 +264,13 @@
   <h1>Página</h1>
     <img src="img/Página web.png" alt="Captura de pantalla de la página">
 </div>
+
+</div>
+ <div class="contenedorflex">
 <div class="contenedor">
   <h1>Código</h1>
-    <img src="img/Codigo1.png" alt="Captura de pantalla del código">
+ 
+  <img src="img/Codigo1.png" alt="Captura de pantalla del código">
     <img src="img/Codigo2.png" alt="Captura de pantalla del código">
     <img src="img/Codigo3.png" alt="Captura de pantalla del código">
     <img src="img/Codigo4.png" alt="Captura de pantalla del código">
@@ -268,8 +278,9 @@
     <img src="img/Codigo6.png" alt="Captura de pantalla del código">
     <img src="img/Codigo7.png" alt="Captura de pantalla del código">
     <img src="img/Codigo8.png" alt="Captura de pantalla del código">
+  </div>
+    
 </div>
-
 
 
 <div id="11"></div>
@@ -569,6 +580,47 @@ document.getElementById("boton").addEventListener("click", function() {
         <p>Tiene 6 capas y se mueven a distintas velocidades</p>
     </section>
 </div>
+
+<div id="22"></div>
+<div class="contenedor">
+  <h1>Tema 18 - Propiedades de Flexbox</h1>
+
+  <h3>1. Order</h3>
+  <p>
+    La propiedad <strong>order</strong> define el orden en que los elementos flexibles aparecen dentro del contenedor, 
+    independientemente del orden en el código HTML.  
+    Por defecto, todos los elementos tienen un valor de <code>order: 0;</code>.  
+    Los elementos con valores menores aparecen antes y los mayores después.
+  </p>
+  <pre><code>div { order: 2; }</code></pre>
+
+  <h3>2. Flex-grow</h3>
+  <p>
+    La propiedad <strong>flex-grow</strong> determina cuánto puede crecer un elemento flexible 
+    en relación con los demás dentro del mismo contenedor.  
+    Si un elemento tiene <code>flex-grow: 2;</code> y otro <code>flex-grow: 1;</code>, 
+    el primero ocupará el doble de espacio adicional disponible.
+  </p>
+  <pre><code>div { flex-grow: 1; }</code></pre>
+
+  <h3>3. Flex-basis</h3>
+  <p>
+    La propiedad <strong>flex-basis</strong> define el tamaño inicial del elemento flexible 
+    antes de distribuir el espacio restante.  
+    Puede definirse en unidades de longitud (<code>px</code>, <code>%</code>, etc.) o como <code>auto</code> 
+    (que usa el tamaño del contenido o <code>width</code> del elemento).
+  </p>
+  <pre><code>div { flex-basis: 200px; }</code></pre>
+
+  <h3>4. Align-self</h3>
+  <p>
+    La propiedad <strong>align-self</strong> permite alinear un elemento individualmente 
+    a lo largo del eje transversal (vertical u horizontal dependiendo de la dirección del flex).  
+    Sobrescribe la propiedad <code>align-items</code> del contenedor padre.
+  </p>
+  <pre><code>div { align-self: center; }</code></pre>
+</div>
+
 </body>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
