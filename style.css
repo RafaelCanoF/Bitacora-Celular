@@ -363,6 +363,39 @@ img {
     height: auto;
     object-fit: cover;
 }
+
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #222;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    z-index: 1000;
+  }
+
+  .cookie-banner button {
+    background-color: var(--colortitulo);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .cookie-banner button:hover {
+    background-color: var(--colortitulo);
+  }
+
+  .cookie-banner a{
+    color: var(--colortitulo);
+  }
 /* Tablet */
 @media (min-width: 768px) {
     nav ul {

@@ -38,8 +38,17 @@
             <li><a href="#20">Códigos JS</a></li>
             <li><a href="#21">Tema 17</a></li>
             <li><a href="#22">Tema 18</a></li>
+            <li><a href="#23">Cotización</a></li>
         </ul>
     </nav>
+
+<div class="cookie-banner" id="cookieBanner">
+  <span>Usamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestra <a href="#cookies" style="color: #fc9c1c;">política de cookies</a>.</span>
+  <button id="acceptCookies">Aceptar</button>
+</div>
+
+
+
     <div id="recuadro" ></div>
     <div class="recuadro">
         <h1>Recuadro de Datos</h1>
@@ -621,6 +630,31 @@ document.getElementById("boton").addEventListener("click", function() {
   <pre><code>div { align-self: center; }</code></pre>
 </div>
 
+<div id="23"></div>
+<div class="contenedor">
+  <h1>Cotización Parcial</h1>
+  
+</div>
+<div id="cookies"></div>
+<div class="contenedor">
+  <h1>Política de Cookies</h1>
+  <p>En este sitio web utilizamos cookies para mejorar tu experiencia de navegación, analizar el tráfico y personalizar el contenido.</p>
+
+<h3>¿Qué son las cookies?</h3>
+<p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas un sitio web. Sirven para recordar tus preferencias, iniciar sesión automáticamente o recopilar estadísticas.</p>
+
+<h3>Tipos de cookies que utilizamos</h3>
+<ul>
+  <li><strong>Cookies necesarias:</strong> permiten el funcionamiento básico del sitio (por ejemplo, mantener la sesión iniciada).</li>
+  <li><strong>Cookies de rendimiento:</strong> nos ayudan a entender cómo los usuarios interactúan con el sitio.</li>
+  <li><strong>Cookies de personalización:</strong> guardan tus preferencias de idioma o tema visual.</li>
+  <li><strong>Cookies de terceros:</strong> pueden provenir de servicios como Google Analytics, YouTube o redes sociales.</li>
+</ul>
+
+<h3>Cómo puedes controlarlas</h3>
+<p>Puedes aceptar o rechazar las cookies desde este banner o configurar tu navegador para bloquearlas. Si las desactivas, algunas funciones del sitio podrían no funcionar correctamente.</p>
+</div>
+
 </body>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -655,5 +689,17 @@ document.getElementById("boton").addEventListener("click", function() {
             updateParallax();
         });
  
+
+ //Cookies:
+ /* Analiza si ya se habían aceptado para que no vuelvan salir,
+ pero por practicidad, deben aparecer cada que se recargue
+ if (localStorage.getItem("cookiesAceptadas")) {
+    document.getElementById("cookieBanner").style.display = "none";
+  }
+*/
+  document.getElementById("acceptCookies").addEventListener("click", function() {
+    localStorage.setItem("cookiesAceptadas", true);
+    document.getElementById("cookieBanner").style.display = "none";
+  });
 </script>
 </html>
