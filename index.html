@@ -8,47 +8,76 @@
     <!--<link rel="stylesheet" href="reset.css">-->
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="style.css">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
-  <nav>
-        <ul>
-            <li><a href="#recuadro">Recuadro</a></li>
-            <li class="dropdown">
-            <a href="#1" class="dropbtn">Temas 1-10</a>
-            <div class="dropdown-content">
-            <a href="#1">Tema 1</a>
-            <a href="#2">Tema 2</a>
-            <a href="#3">Tema 3</a>
-            <a href="#4">Tema 4</a>
-            <a href="#5">Tema 5</a>
-            <a href="#6">Tema 6</a>
-            <a href="#7">Temas 7 y 8</a>
-            <a href="#9">Tema 9</a>
-            <a href="#10">Tema 10</a>
-            </div>
-            <li class="dropdown">
-            <a href="#11" class="dropbtn">Temas 11-18</a>
-            <div class="dropdown-content">
-            <a href="#11">Tema 11</a>
-            <a href="#12">Tema 12</a>
-            <a href="#13">Tema 13</a>
-            <a href="#14">Tema 14</a>
-            <a href="#15">Tema 15</a>
-            <a href="#16">Tema 16</a>
-            <a href="#21">Tema 17</a>
-            <a href="#22">Tema 18</a>
-            </div>
-            <li><a href="#ia">Tema IA</a></li>
-            <li><a href="#mapa">Diagrama</a></li>
-            <li><a href="#17">Propuesta</a></li>
-            <li><a href="#18">Parcial 2</a></li>
-            <li><a href="#19">justificación</a></li>
-            <li><a href="#20">Códigos JS</a></li>
-            <li><a href="#23">Cotización</a></li>
-        </ul>
-    </nav>
+
+<!-- NAVBAR combinada con tu estilo -->
+<nav class="navbar navbar-expand-lg mi-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand text-light" href="#">Mi Sitio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido" aria-controls="navbarContenido" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContenido">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link" href="#recuadro">Recuadro</a>
+        </li>
+
+        <!-- Dropdown Temas 1-10 -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Temas 1-10
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#1">Tema 1</a></li>
+            <li><a class="dropdown-item" href="#2">Tema 2</a></li>
+            <li><a class="dropdown-item" href="#3">Tema 3</a></li>
+            <li><a class="dropdown-item" href="#4">Tema 4</a></li>
+            <li><a class="dropdown-item" href="#5">Tema 5</a></li>
+            <li><a class="dropdown-item" href="#6">Tema 6</a></li>
+            <li><a class="dropdown-item" href="#7">Temas 7 y 8</a></li>
+            <li><a class="dropdown-item" href="#9">Tema 9</a></li>
+            <li><a class="dropdown-item" href="#10">Tema 10</a></li>
+          </ul>
+        </li>
+
+        <!-- Dropdown Temas 11-18 -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#11" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Temas 11-18
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#11">Tema 11</a></li>
+            <li><a class="dropdown-item" href="#12">Tema 12</a></li>
+            <li><a class="dropdown-item" href="#13">Tema 13</a></li>
+            <li><a class="dropdown-item" href="#14">Tema 14</a></li>
+            <li><a class="dropdown-item" href="#15">Tema 15</a></li>
+            <li><a class="dropdown-item" href="#16">Tema 16</a></li>
+            <li><a class="dropdown-item" href="#21">Tema 17</a></li>
+            <li><a class="dropdown-item" href="#22">Tema 18</a></li>
+            <li><a class="dropdown-item" href="#24">Tema 19</a></li>
+          </ul>
+        </li>
+
+        <!-- Otros enlaces -->
+        <li class="nav-item"><a class="nav-link" href="#ia">Tema IA</a></li>
+        <li class="nav-item"><a class="nav-link" href="#mapa">Diagrama</a></li>
+        <li class="nav-item"><a class="nav-link" href="#17">Propuesta</a></li>
+        <li class="nav-item"><a class="nav-link" href="#18">Parcial 2</a></li>
+        <li class="nav-item"><a class="nav-link" href="#19">Justificación</a></li>
+        <li class="nav-item"><a class="nav-link" href="#20">Códigos JS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#23">Cotización</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
 
 <div class="cookie-banner" id="cookieBanner">
   <span>Usamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestra <a href="#cookies" style="color: #fc9c1c;">política de cookies</a>.</span>
@@ -663,6 +692,35 @@ document.getElementById("boton").addEventListener("click", function() {
 <p>Puedes aceptar o rechazar las cookies desde este banner o configurar tu navegador para bloquearlas. Si las desactivas, algunas funciones del sitio podrían no funcionar correctamente.</p>
 </div>
 
+<div id="24"></div>
+<div class="contenedor">
+  <h1>Tema 19 - bootstrap</h1>
+  <p>Bootstrap es un framework de diseño web que permite crear sitios responsivos y visualmente atractivos de manera rápida, utilizando una combinación de HTML, CSS y JavaScript predefinidos. Su principal ventaja es que facilita el uso de componentes ya diseñados —como menús, botones, formularios o carruseles— que se adaptan automáticamente a diferentes tamaños de pantalla.
+En mi bitácora integré un navbar (barra de navegación) usando la estructura de Bootstrap para organizar los enlaces del sitio de forma ordenada y con estilo profesional, y también añadí un carrusel de imágenes, que permite mostrar contenido visual de manera dinámica y elegante. Ambos elementos contribuyen a mejorar la interactividad y presentación general de la página.</p>
+  <div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/OwBanner.jpg" class="d-block w-100" alt="Banner de Overwatch">
+    </div>
+    <div class="carousel-item">
+      <img src="img/OwLogo.png" class="d-block w-100" alt="Logo de Overwatch">
+    </div>
+    <div class="carousel-item">
+      <img src="img/Moira.png" class="d-block w-100" alt="Moira">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 <script>
   document.addEventListener('DOMContentLoaded', function () {

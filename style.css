@@ -25,82 +25,116 @@ body {
 
 /* ---------- BARRA NAV ---------- */
 
-nav {
-    background-color: #fc9c1c;
-    color: aliceblue;
-    padding: 8px;
-    position: sticky;
-    top: 0;
-    z-index: 7;
-    margin: 0;
+/* ---- NAVBAR GENERAL ---- */
+nav { 
+    background-color: #fc9c1c; 
+    color: aliceblue; 
+    padding: 8px; 
+  position: sticky !important; /* fuerza el sticky */
+  top: 0 !important;
+    z-index: 7; 
+    margin: 0; 
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;            
-    justify-content: center;     
-    gap: 6px 12px;              
+/* ---- LOGO / NOMBRE ---- */
+.navbar-brand {
+  color: white !important;
+  font-family: "OverwatchFont", sans-serif;
+  font-size: 1rem;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
-nav ul li {
-    margin: 0;
+.navbar-brand:hover {
+  color: #000000 !important;
+  transform: scale(1.05);
 }
 
-nav ul li a {
-    color: white;
-    font-family: "OverwatchFont", sans-serif;
-    font-size: 0.85rem;
-    padding: 6px 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: transform 0.2s ease, color 0.2s ease;
+/* ---- CONTENEDOR DE LINKS ---- */
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 12px;
 }
 
-nav ul li a:hover {
-    color: #000000;
-    transform: scale(1.05);
+/* ---- ENLACES ---- */
+.nav-link {
+  color: white !important;
+  font-family: "OverwatchFont", sans-serif;
+  font-size: 0.85rem;
+  padding: 6px 10px !important;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
-        li a,
-        .dropbtn {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding: 6px 10px;
-            text-decoration: none;
-        }
- 
-        li.dropdown {
-            display: inline-block;
-        }
- 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
- 
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
- 
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
- 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+.nav-link:hover {
+  color: #000000 !important;
+  transform: scale(1.05);
+}
+
+/* ---- DROPDOWN ---- */
+.nav-item.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 10;
+  margin-top: 2px;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Mostrar menú al pasar el mouse */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Estilo de los elementos dentro del dropdown */
+.dropdown-item {
+  color: black !important;
+  padding: 12px 16px !important;
+  font-size: 0.85rem;
+  font-family: "OverwatchFont", sans-serif;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1 !important;
+}
+
+/* ---- HAMBURGER BUTTON (modo móvil) ---- */
+.navbar-toggler {
+  border-color: white !important;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ---- Ajuste general en pantallas pequeñas ---- */
+@media (max-width: 991px) {
+  .navbar-nav {
+    justify-content: flex-start;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+  }
+
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: none; /* desactiva hover en móvil */
+  }
+
+  .nav-item.dropdown.show .dropdown-menu {
+    display: block; /* usa el toggle Bootstrap en móvil */
+  }
+}
+
 
 /* ---------- CONTENEDORES ---------- */
 .recuadro,
@@ -128,7 +162,7 @@ nav ul li a:hover {
 }
 
 h1 {
-    color: var(--colortitulo);
+    color: var(--colortitulo) !important;
     font-family: "OverwatchFont", sans-serif;
     font-size: 1.5rem;
     padding: 10px 20px;
